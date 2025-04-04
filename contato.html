@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - RafaDev Systems</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    <nav>
+        <ul id="topMenu">
+            <li>
+                <a href="portifoliUm.html" aria-label="Página inicial da RafaDev Systems">
+                    <img src="RafaDev_logo_1_free-file.jpg" alt="Logo da RafaDev Systems" id="logo" loading="lazy">
+                </a>
+            </li>
+            <li><a href="portifoliUm.html">Home</a></li>
+            <li><a href="sobreMim.html">Sobre Mim</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="intex.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="section1 contact-container">
+        <h1><div class="typing" id="typingEffect"></div></h1>
+        <form action="contato.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="usuario_nome" placeholder="Insira o seu nome:" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="usuario_email" placeholder="Insira o seu email:" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="usuario_telefone" placeholder="Insira o seu telefone:" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="usuario_mensagem" rows="5" placeholder="Insira a sua mensagem:" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2025 Rafael - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        const textLines = [
+            "Você tem algum projeto em mente?",
+            "Se a resposta for sim!",
+            "Entre em contato logo abaixo :)"
+        ];
+
+        const typingEffect = document.getElementById('typingEffect');
+        let lineIndex = 0;
+        let charIndex = 0;
+
+        function typeLine() {
+            if (lineIndex < textLines.length) {
+                if (charIndex < textLines[lineIndex].length) {
+                    typingEffect.textContent += textLines[lineIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeLine, 30);
+                } else {
+                    typingEffect.textContent += '\n';
+                    lineIndex++;
+                    charIndex = 0;
+                    setTimeout(typeLine, 500);
+                }
+            }
+        }
+
+        typeLine();
+    </script>
+</body>
+</html>

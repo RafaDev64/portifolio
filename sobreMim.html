@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Portfólio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: black;
+            color: rgb(138, 138, 138);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #topMenu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 0.5rem 1rem;
+}
+
+#topMenu .logo {
+    margin-right: auto;
+}
+
+#logo {
+    max-width: 50px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+#topMenu li a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 1rem;
+    display: block; /* Garante que  link ocupe  o espaço do <li> */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* transform na transição */
+}
+
+#topMenu li a:hover {
+    background-color: rgba(99, 99, 99, 0.459); /* Fundo ao passar o mouse */
+    transform: scale(1.05); /* Escala  para evitar sobreposição */
+    border-radius: 10px;
+}
+        #topMenu li:first-child {
+            margin-right: auto;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .bio {
+            display: flex;
+            align-items: center;
+            background-color: rgba(5, 5, 5, 0.8);
+            border: 2px solid #0aff68a8;
+            border-radius: 10px;
+            color: #0aff68a8;
+            padding: 20px;
+            max-width: 600px;
+            font-family: monospace;
+        }
+
+        .bio img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .bio h2 {
+            color: #0aff68a8;
+            margin-bottom: 10px; 
+        }
+
+        .bio-buttons {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .bio-buttons a {
+            text-decoration: none;
+            padding: 5px; 
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bio-buttons a:hover {
+            background-color: rgba(0, 204, 102, 0.2);
+            transform: scale(1.05);
+        }
+
+        .bio-buttons img {
+            width: 24px; 
+            height: 24px;
+            background-color: aliceblue;
+        }
+
+        .skills {
+            background-color: rgba(5, 5, 5, 0.8);
+            border: 2px solid #0aff68a8;
+            border-radius: 10px;
+            color: #0aff68a8;
+            padding: 20px;
+            max-width: 400px;
+            max-height: 300px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+
+        .skills h2 {
+            margin-bottom: 10px;
+            color: #0aff68a8;
+        }
+
+        .skill {
+            background-color: rgba(20, 20, 20, 0.8);
+            border-radius: 6px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: transform 0.2s;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="topMenu">
+                <li>
+                    <a href="portifoliUm.html">
+                        <img src="RafaDev_logo_1_free-file.jpg" alt="Logo da RafaDev Systems" id="logo">
+                    </a>
+                </li>
+                <li><a href="portifoliUm.html">Home</a></li>
+                <li><a href="sobreMim.html">Sobre Mim</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="bio">
+            <img src="sua_foto.jpg" alt="Sua Foto">
+            <div>
+                <h2>Olá, eu sou Rafael</h2>
+                <p>Sou um Desenvolvedor de sistemas com experiência em desenvolvimento de aplicações web e mobile. Minha paixão é criar soluções inovadoras que melhorem a experiência do usuário e resolvam problemas do dia a dia.
+                    Estou sempre em busca de aprender mais sobre programação, design de interfaces e metodologias ágeis. 
+                    Acredito que a colaboração em equipe e a troca de ideias são fundamentais para o sucesso de qualquer projeto, e estou sempre disposto a compartilhar conhecimentos e aprender com os outros.
+                </p>
+                <div class="bio-buttons">
+                    <a href="www.linkedin.com/in/rafael-pereira-8514b734b" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+                    <a href="https://github.com/RafaDev64" target="_blank"><img src="github.png" alt="GitHub"></a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="skills">
+            <h2>Habilidades:</h2>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Python</div>
+            
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 Rafael - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

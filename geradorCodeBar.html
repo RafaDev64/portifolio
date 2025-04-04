@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Código de Barras - RafaDev Systems</title>
+    <link rel="stylesheet" href="geradorCodebar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="topMenu" role="navigation">
+                <li class="logo">
+                    <a href="portifoliUm.html" aria-label="Página inicial da RafaDev Systems">
+                        <img src="RafaDev_logo_1_free-file.jpg" alt="Logo da RafaDev Systems" id="logo" loading="lazy">
+                    </a>
+                </li>
+                <li><a href="portifoliUm.html">Home</a></li>
+                <li><a href="sobreMim.html">Sobre Mim</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Gerador de Código de Barras</h1>
+        <section class="barcode-container">
+            <form id="barcodeForm">
+                <label for="barcodeInput">Digite os números:</label>
+                <input type="text" id="barcodeInput" placeholder="Ex.: 123456789" required>
+                <button type="submit" class="button">Gerar Código</button>
+            </form>
+            <div id="barcodeResult" class="barcode-display">
+                <canvas id="barcodeCanvas"></canvas>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Rafael - Todos os direitos reservados</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="geradorCodeBar.js"></script>
+</body>
+</html>
