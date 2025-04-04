@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="portifolio.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="topMenu">
+                <li>
+                    <a href="portifoliUm.html">
+                        <img src="RafaDev_logo_1_free-file.jpg" alt="Logo da RafaDev Systems" id="logo">
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobreMim.html">Sobre Mim</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="section1">
+            <div class="centralize">
+                <h1>RAFADEV SYSTEMS</h1>
+                <div class="typing" id="typingEffect"></div>
+                <button id="botaoProjetos">Clique aqui</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById("botaoProjetos").onclick = function(){
+            window.location.href ="projetos.html";
+        }
+ 
+        const textLines = [
+            
+            "Sou Desenvolvedor Junior, apaixonado por tecnologia e os bastidores da programação.",
+            "Logo abaixo, você encontrará uma seleção dos meus melhores trabalhos e projetos que refletem minha experiência e habilidades."
+        ];
+
+        const typingEffect = document.getElementById('typingEffect');
+        let lineIndex = 0;
+        let charIndex = 0;
+
+        function typeLine() {
+            if (lineIndex < textLines.length) {
+                if (charIndex < textLines[lineIndex].length) {
+                    typingEffect.textContent += textLines[lineIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeLine, 30); // Ajusta a velocidade da digitação aqui
+                } else {
+                    typingEffect.textContent += '\n'; // Adicionei uma quebra de linha
+                    lineIndex++;
+                    charIndex = 0;
+                    setTimeout(typeLine, 500); // Pausa antes de começar a próxima linha
+                }
+            }
+        }
+
+        typeLine(); // efeito de digitação começa aqui
+    </script>
+</body>
+</html>
