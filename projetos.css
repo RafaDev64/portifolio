@@ -18,12 +18,7 @@ body {
 
 /* Header e Navegação */
 /* Header e Navegação */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #000;
-}
+
 
 #topMenu {
     display: flex;
